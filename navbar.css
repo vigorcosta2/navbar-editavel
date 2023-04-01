@@ -1,0 +1,102 @@
+/* ------ Navbar responsivo editável ----- 
+
+Autor: Igor Costa
+Data: 31/03/2023
+github: https://github.com/vigorcosta2
+
+------------------------------------------
+
+/* ------ Modificação --------- */
+
+:root{
+    
+    /* Cor do navegador */
+    --cor-navbar: blueviolet;
+
+    /*cor da fonte para navegador*/
+    --fonte: white;
+   
+    /*cor do menu hover(sobrepor)*/
+    --cor-hover: rgb(71,14,124);
+    --fonte-hover:white;
+    
+    /*Tipografia*/
+    --tamanho-fonte: 18px;
+    --tipo-fonte: Arial, Helvetica, sans-serif;
+
+    /*tamanho do botão*/
+    --btn: 10px 20px;
+
+    /*Borda*/
+    --radius: 20px;
+    --contorno: 2px solid white;
+    
+    /*Alinhamento*/
+    --alinhamento: center;
+
+    /*dica de alinhamento:---------
+     Esquerda: start;
+     Centro: center;
+     Direita: end;
+     Entre-espaço: space-between;
+     Espaço-ao-redor: space-around;
+     uniformemente:space-evenly;
+     ----------------------------*/
+    
+}     
+
+.navbar{
+    background: var(--cor-navbar);
+    display: flex;
+    flex-direction: row;
+    justify-content: var(--alinhamento);
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+
+.navbar-sobreamento{
+    background: var(--cor-navbar);
+    display: flex;
+    flex-direction: row;
+    justify-content: var(--alinhamento);
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
+     box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75); 
+        
+}
+.menu{ 
+    margin: 3px; 
+    border-radius: var(--radius);
+    color: var(--fonte);
+    padding: var(--btn);
+    font-size: var(--tamanho-fonte);
+    font-family: var(--tipo-fonte);
+    text-decoration: none;
+}
+.menu:hover{
+    background:var(--cor-hover); 
+    color: var(--fonte-hover);
+}
+
+.menu-contorno{
+    margin: 5px; 
+    border: var(--contorno);
+    border-radius: var(--radius);
+    color: var(--fonte);
+    padding: var(--btn);
+    font-size: var(--tamanho-fonte);
+    font-family: var(--tipo-fonte);
+    text-decoration: none;
+}
+.menu-contorno:hover{
+    background:var(--cor-hover); 
+    color: var(--fonte-hover);
+}
+
+/*responsivo para smartphone*/
+@media(max-width:440px){
+.navbar{flex-direction: column;}
+.navbar-sobreamento{flex-direction: column;}
+}
